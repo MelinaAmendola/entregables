@@ -6,24 +6,31 @@ vehiculo, dar de baja, incorporando los conceptos nuevos:
 Mandar el link al repositorio de GitHub*/
 
 /*main*/
-import { Vehiculo } from "./Vehiculo"; 
+import { Auto } from "./Auto"; 
 
 class RegistroAutomotor {
     /*atributos*/
-    public listadoVehiculos : Vehiculo[];
+    public listadoDeAutos : Auto[];
+    public patente: string; 
     
-    /*constructor*/
-    public constructor (listadoParametro: Vehiculo[]) {
-        this.listadoVehiculos = listadoParametro;
+    /*constructor*/ 
+    public constructor (listadoParametro: Auto[]) {
+        this.listadoDeAutos = listadoParametro;
     }
 
     /*métodos: buscar, agregar, editar y eliminar */
-    agregarVehiculo(parametroVehiculo: Vehiculo): void {
-        this.listadoVehiculos.push(parametroVehiculo);
+     agregarAuto(parametroAuto: Auto): void {
+        this.listadoDeAutos.push(parametroAuto);
     }
 
-    buscarVehiculo (): void {
-        
+    eliminarAuto (patente: string): void {
+        this.listadoDeAutos = this.listadoDeAutos.filter(auto => auto.getPatente() !== patente); 
     }
-    
+
+    modificarAuto (parametroAuto: Auto, marca: string, modelo: string, anio: number, motor: string) {
+    }
+
+    buscarAuto(): void {  
+    }
+
 }
