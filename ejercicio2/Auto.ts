@@ -48,10 +48,3 @@ export class Auto {
         return this.patente;
     }
 }
-
-let auto1 = new Auto ("Volkswagen", "Gol", 2016, "Nafta", "AAA000");
-let auto2 = new Auto ("Fiat", "Palio", 2006, "Gasoil", "BBB111");
-let auto3 = new Auto ("Renault", "Sandero", 2010, "Gasoil", "CCC222");
-let auto4 = new Auto ("Nissan", "Versa", 2022, "Nafta", "DDD333");
-
-console.log(Auto);
