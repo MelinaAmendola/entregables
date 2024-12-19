@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Mago_1 = require("./Mago");
+var Luchador_1 = require("./Luchador");
+var Arquero_1 = require("./Arquero");
+var mago1 = new Mago_1.Mago("Arquímedes", 3, 200);
+var luchador1 = new Luchador_1.Luchador("Ralph el Demoledor", 1, 150);
+var arquero1 = new Arquero_1.Arquero("Robin Hood", 2, 170);
+mago1.atacar();
+arquero1.defender();
+luchador1.atacar();
+mago1.defender();

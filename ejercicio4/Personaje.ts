@@ -9,14 +9,6 @@ export class Personaje {
         this.puntosDeVida = puntosDeVida;
     }
 
-    atacar(): void {
-        console.log(`¡${this.nombre} lanza un ataque!`);
-    }
-
-    defender(): void {
-        console.log(`${this.nombre} se defiende`);
-    }
-
     public getNombre(): string {
         return this.nombre;
     }
