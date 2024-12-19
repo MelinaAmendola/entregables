@@ -1,4 +1,6 @@
 import { Auto } from "./Auto";
+import { Rueda } from "./Rueda";
+import { Motor } from "./Motor";
 
 export class RegistroAutomotor {
     private direccion: string;
@@ -27,8 +29,14 @@ export class RegistroAutomotor {
         this.listadoAutos = this.listadoAutos.filter(auto => auto.getPatente() !== patente);
     }
 
-    modificarAuto (parametroAuto: Auto, marca: string, modelo: string, anio: number, motor: string) {
-
+    modificarAuto (patente: string, nuevaMarca: string, nuevoModelo: string, nuevoAnio: number, nuevoMotor: Motor , nuevoRodado: Rueda) : void {
+        const autoAModificar = this.listadoAutos.find(auto => auto.getPatente() === patente);
+        autoAModificar.setMarca(nuevaMarca);
+        autoAModificar.setModelo(nuevoModelo);
+        autoAModificar.setAnio(nuevoAnio);
+        autoAModificar.setMotor(nuevoMotor);
+        autoAModificar.setRueda(nuevoRodado);
+        console.log (`Se modificaron las características del auto cuya patente es: ${patente}` )
     }
 
     buscarAuto (patente: string) {

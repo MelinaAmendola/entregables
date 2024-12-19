@@ -37,3 +37,5 @@ console.log("Listado de autos registrados: ", registroautomotor.getAutos().map(a
 //eliminar un auto
 registroautomotor.eliminarAuto("DDD333");
 console.log("Listado de autos después de eliminar según patente: ", registroautomotor.getAutos().map(auto => auto.getModelo()));
+
+registroautomotor.modificarAuto("CCC222", "Fiat", "Chronos", 2015, motor3, rueda2); 
