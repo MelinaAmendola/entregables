@@ -1,50 +1,68 @@
+import { Rueda } from "./Rueda";
+import { Motor } from "./Motor";
+
 export class Auto {
     private marca: string;
     private modelo: string;
     private anio: number;
-    private motor: string;
     private patente: string;
+    private motor: Motor;
+    private rueda : Rueda;
 
-    constructor(marca: string, modelo: string, año: number, motor: string, patente: string) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anio = año;
-        this.motor = motor;
-        this.patente = patente;
-    }
-    /*metodos*/
-
-    /*SETS*/
-    setMarca (marca: string) : void {
-        this.marca = "Toyota";
-    }
-    setModelo (modelo: string) : void {
-        this.modelo = "Etios";
-    }
-    setAnio (anio: number) :void {
-        this.anio = 2018;
-    }
-    setMotor (motor : string) {
-        this.motor = "nafta";
-    }
-    setPatente (patente: string) {
-        this.patente = "ABC123"
+    constructor (marcaParametro: string, modeloParametro: string, anioParametro: number, patenteParametro: string, motorParametro: Motor, ruedaParametro: Rueda) { 
+        this.marca = marcaParametro;
+        this.modelo = modeloParametro;
+        this.anio = anioParametro;
+        this.patente = patenteParametro;
+        this.motor = motorParametro;
+        this.rueda =  ruedaParametro;
     }
 
-    /*GETS*/
     getMarca(): string {
         return this.marca;
     }
+
     getModelo(): string {
-        return this.patente;
+        return this.modelo;
     }
+
     getAnio(): number {
         return this.anio;
     }
-    getMotor(): string {
-        return this.motor;
-    }
+
     getPatente(): string {
         return this.patente;
+    }
+
+    getMotor(): Motor {
+        return this.motor;
+    }
+
+    getRueda(): Rueda {
+        return this.rueda;
+    }
+
+    setMarca (marcaParametro: string) : void {
+        this.marca = marcaParametro;
+    }
+    
+    setModelo (modeloParametro: string) : void {
+        this.modelo = modeloParametro;
+    }
+
+    setAnio (anioParametro: number) : void {
+        this.anio = anioParametro;
+    }
+
+    setPatente (patenteParametro: string) : void {
+        this.patente = patenteParametro;
+    }
+
+    setMotor (motorParametro: Motor) : void {
+        this.motor = motorParametro;
+    }
+
+    setRueda (ruedaParametro: Rueda): void {
+        this.rueda = ruedaParametro;
     }
 }
